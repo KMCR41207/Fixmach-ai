@@ -1,4 +1,5 @@
 import io
+import os
 import numpy as np
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL_PATH = r"C:\Users\qwert\Downloads\fixmach_mega_final.keras"
+MODEL_PATH = os.getenv("MODEL_PATH", r"C:\Users\qwert\Downloads\fixmach_mega_final.keras")
 
 print("Loading model...")
 model = tf.keras.models.load_model(MODEL_PATH)
