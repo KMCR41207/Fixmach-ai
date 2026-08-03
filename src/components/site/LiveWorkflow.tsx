@@ -64,10 +64,11 @@ export function LiveWorkflow() {
           />
         </div>
 
-        <ol className="space-y-1.5 p-4">
+        <ol className="space-y-1.5 p-4" aria-label="Workflow stages">
           {stages.map((s, i) => (
             <li
               key={s.label}
+              aria-current={i === active ? "step" : undefined}
               className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-xs transition-all duration-300 ${
                 i === active
                   ? "bg-secondary font-semibold text-foreground"
