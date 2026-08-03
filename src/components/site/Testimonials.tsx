@@ -37,9 +37,9 @@ export function Testimonials() {
             <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground">
               “{t.quote}”
             </blockquote>
-            <div className="mt-5 flex items-center gap-1 text-ember">
+            <div className="mt-5 flex items-center gap-1 text-ember" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="size-3.5 fill-current" />
+                <Star key={i} className="size-3.5 fill-current" aria-hidden="true" />
               ))}
             </div>
             <figcaption className="mt-3 text-sm font-semibold">
