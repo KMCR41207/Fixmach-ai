@@ -351,7 +351,7 @@ export function DiagnosisFlow() {
                 onClick={openFilePicker}
                 className="rounded-xl border border-primary px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-accent disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {fileName ? "Change file" : "Choose file"}
+                {currentFile ? "Change file" : "Choose file"}
               </button>
 
               {/* Run button — only active after file is selected */}
