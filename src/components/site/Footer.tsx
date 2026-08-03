@@ -24,7 +24,7 @@ const socials = ["LinkedIn", "YouTube", "GitHub", "X"];
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border bg-secondary/40">
+    <footer className="border-t border-border bg-secondary/40" role="contentinfo">
       <div className="mx-auto grid w-[min(1200px,92%)] gap-10 py-14 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <div className="flex items-center gap-2.5">
