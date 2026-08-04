@@ -34,10 +34,11 @@ export function TechnicianDashboard() {
         </div>
       </div>
 
-      <div className="mt-3 flex items-end gap-1.5 rounded-2xl bg-secondary/60 p-4">
+      <div className="mt-3 flex items-end gap-1.5 rounded-2xl bg-secondary/60 p-4" role="img" aria-label="Weekly jobs bar chart">
         {bars.map((h, i) => (
           <span
             key={i}
+            aria-hidden="true"
             className="flex-1 rounded-t-md bg-[image:var(--gradient-accent)]"
             style={{ height: `${h}px` }}
           />
