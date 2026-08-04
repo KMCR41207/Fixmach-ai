@@ -18,6 +18,7 @@ export function MachineCategories() {
       {categories.map((c) => (
         <article
           key={c.name}
+          aria-label={`${c.name}: ${c.techs.toLocaleString()} technicians, ${c.time} average repair, ${c.availability} availability`}
           className="surface-card group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
         >
           <div className="relative h-28 bg-steel blueprint-grid">
