@@ -38,7 +38,7 @@ export function MachineCategories() {
             </div>
             <div>
               <span className="mx-auto block size-4 rounded-full bg-ember/30 p-1">
-                <span className="block size-2 rounded-full bg-ember" />
+                <span className={`block size-2 rounded-full ${c.availability === "High" ? "bg-green-500" : "bg-ember"}`} />
               </span>
               <p className="mt-1.5 text-sm font-semibold">{c.availability}</p>
               <p className="text-[11px] text-muted-foreground">Availability</p>
