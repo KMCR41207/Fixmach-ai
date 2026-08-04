@@ -223,17 +223,19 @@ export function DiagnosisFlow() {
 
     let fault = "Mechanical wear detected";
     let rec = "Schedule preventive maintenance inspection.";
-    if (isOverheat) { fault = "Thermal overload — cooling system fault"; rec = "Stop machine. Check coolant flow and fan operation."; }
-    else if (isVibration) { fault = "Bearing wear or misalignment detected"; rec = "Inspect bearings and shaft alignment before next shift."; }
-    else if (isNoise) { fault = "Abnormal mechanical friction — possible gear/bearing damage"; rec = "Reduce load and inspect drive components."; }
-    else if (isSlow) { fault = "Drive or motor performance degradation"; rec = "Check motor current draw and drive parameters."; }
-    else if (isLeak) { fault = "Hydraulic or lubricant seal failure"; rec = "Isolate circuit, replace seals, check pressure settings."; }
+    let cost = "₹18,000 – ₹35,000 incl. parts";
+    if (isOverheat) { fault = "Thermal overload — cooling system fault"; rec = "Stop machine. Check coolant flow and fan operation."; cost = "₹22,000 – ₹45,000 incl. parts"; }
+    else if (isVibration) { fault = "Bearing wear or misalignment detected"; rec = "Inspect bearings and shaft alignment before next shift."; cost = "₹28,000 – ₹52,000 incl. parts"; }
+    else if (isNoise) { fault = "Abnormal mechanical friction — possible gear/bearing damage"; rec = "Reduce load and inspect drive components."; cost = "₹24,000 – ₹48,000 incl. parts"; }
+    else if (isSlow) { fault = "Drive or motor performance degradation"; rec = "Check motor current draw and drive parameters."; cost = "₹35,000 – ₹70,000 incl. parts"; }
+    else if (isLeak) { fault = "Hydraulic or lubricant seal failure"; rec = "Isolate circuit, replace seals, check pressure settings."; cost = "₹12,000 – ₹28,000 incl. parts"; }
 
     setPipeline(prev => prev.map((p, idx) => {
       if (idx === 0) return { ...p, detail: "Problem description received" };
       if (idx === 1) return { ...p, detail: "Keywords extracted from description" };
       if (idx === 2) return { ...p, detail: fault };
       if (idx === 3) return { ...p, detail: "85% — NLP pattern match" };
+      if (idx === 4) return { ...p, detail: cost };
       if (idx === 5) return { ...p, detail: rec };
       return p;
     }));
@@ -447,12 +449,12 @@ export function DiagnosisFlow() {
           </div>
         )}
         {step === pipeline.length - 1 && !running && (
-          <button
-            type="button"
-            className="mt-3 w-full rounded-xl bg-[image:var(--gradient-accent)] py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          <a
+            href="#book"
+            className="mt-3 block w-full rounded-xl bg-[image:var(--gradient-accent)] py-2.5 text-center text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             Book Repair Now
-          </button>
+          </a>
         )}
         <ol className="mt-5 space-y-2">
           {pipeline.map((p, i) => {
