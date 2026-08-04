@@ -465,6 +465,7 @@ function Landing() {
 
       <a
         href="#book"
+        aria-label="Book a repair"
         className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-2xl bg-[image:var(--gradient-ember)] px-5 py-3 text-sm font-semibold text-ember-foreground shadow-[var(--shadow-glow)] animate-pulse-ring transition-transform hover:-translate-y-0.5"
       >
         <Wrench className="size-4" /> Book Repair
