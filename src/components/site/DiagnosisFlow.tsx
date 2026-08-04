@@ -72,15 +72,16 @@ export function DiagnosisFlow() {
 
   const runDiagnosis = () => {
     if (running) return;
+    setPipeline(defaultPipeline);
     setRunning(true);
     setStep(0);
     let i = 0;
     const id = setInterval(() => {
       i += 1;
-      if (i >= pipeline.length) {
+      if (i >= defaultPipeline.length) {
         clearInterval(id);
         setRunning(false);
-        setStep(pipeline.length - 1);
+        setStep(defaultPipeline.length - 1);
         return;
       }
       setStep(i);
@@ -210,7 +211,46 @@ export function DiagnosisFlow() {
       setError("Please describe the problem before running diagnosis.");
       return;
     }
-    runDiagnosis();
+    if (running) return;
+
+    // Derive simple NLP hints from description keywords
+    const text = description.toLowerCase();
+    const isVibration = text.includes("vibrat") || text.includes("shake");
+    const isOverheat = text.includes("heat") || text.includes("hot") || text.includes("temp");
+    const isNoise = text.includes("noise") || text.includes("grind") || text.includes("sound");
+    const isSlow = text.includes("slow") || text.includes("speed") || text.includes("rpm");
+    const isLeak = text.includes("leak") || text.includes("oil") || text.includes("fluid");
+
+    let fault = "Mechanical wear detected";
+    let rec = "Schedule preventive maintenance inspection.";
+    if (isOverheat) { fault = "Thermal overload — cooling system fault"; rec = "Stop machine. Check coolant flow and fan operation."; }
+    else if (isVibration) { fault = "Bearing wear or misalignment detected"; rec = "Inspect bearings and shaft alignment before next shift."; }
+    else if (isNoise) { fault = "Abnormal mechanical friction — possible gear/bearing damage"; rec = "Reduce load and inspect drive components."; }
+    else if (isSlow) { fault = "Drive or motor performance degradation"; rec = "Check motor current draw and drive parameters."; }
+    else if (isLeak) { fault = "Hydraulic or lubricant seal failure"; rec = "Isolate circuit, replace seals, check pressure settings."; }
+
+    setPipeline(prev => prev.map((p, idx) => {
+      if (idx === 0) return { ...p, detail: "Problem description received" };
+      if (idx === 1) return { ...p, detail: "Keywords extracted from description" };
+      if (idx === 2) return { ...p, detail: fault };
+      if (idx === 3) return { ...p, detail: "85% — NLP pattern match" };
+      if (idx === 5) return { ...p, detail: rec };
+      return p;
+    }));
+
+    setRunning(true);
+    setStep(0);
+    let i = 0;
+    const id = setInterval(() => {
+      i += 1;
+      if (i >= defaultPipeline.length) {
+        clearInterval(id);
+        setRunning(false);
+        setStep(defaultPipeline.length - 1);
+      } else {
+        setStep(i);
+      }
+    }, 750);
   };
 
   return (
