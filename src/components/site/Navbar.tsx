@@ -126,13 +126,14 @@ export function Navbar() {
 
       {open && (
         <div className="mx-auto mt-2 w-[min(1200px,94%)] rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] lg:hidden">
-          <nav className="flex flex-col gap-1">
+          <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
             {[{ label: "Industries", href: "#industries" }, ...links].map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
+                aria-current={undefined}
               >
                 {l.label}
               </a>
