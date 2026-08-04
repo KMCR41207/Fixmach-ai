@@ -19,7 +19,12 @@ const columns = [
   },
 ];
 
-const socials = ["LinkedIn", "YouTube", "GitHub", "X"];
+  const socials = [
+    { name: "LinkedIn", href: "https://linkedin.com" },
+    { name: "YouTube", href: "https://youtube.com" },
+    { name: "GitHub", href: "https://github.com" },
+    { name: "X", href: "https://x.com" },
+  ];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -40,11 +45,14 @@ export function Footer() {
           <div className="mt-5 flex flex-wrap gap-2">
             {socials.map((s) => (
               <a
-                key={s}
-                href="#"
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`FixMach AI on ${s.name}`}
                 className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                {s}
+                {s.name}
               </a>
             ))}
           </div>
