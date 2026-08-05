@@ -215,11 +215,12 @@ export function DiagnosisFlow() {
 
     // Derive simple NLP hints from description keywords
     const text = description.toLowerCase();
-    const isVibration = text.includes("vibrat") || text.includes("shake");
-    const isOverheat = text.includes("heat") || text.includes("hot") || text.includes("temp");
-    const isNoise = text.includes("noise") || text.includes("grind") || text.includes("sound");
-    const isSlow = text.includes("slow") || text.includes("speed") || text.includes("rpm");
-    const isLeak = text.includes("leak") || text.includes("oil") || text.includes("fluid");
+    const isVibration = text.includes("vibrat") || text.includes("shake") || text.includes("rattle");
+    const isOverheat = text.includes("heat") || text.includes("hot") || text.includes("temp") || text.includes("burn") || text.includes("smoke");
+    const isNoise = text.includes("noise") || text.includes("grind") || text.includes("sound") || text.includes("squeak") || text.includes("clank");
+    const isSlow = text.includes("slow") || text.includes("speed") || text.includes("rpm") || text.includes("power") || text.includes("weak");
+    const isLeak = text.includes("leak") || text.includes("oil") || text.includes("fluid") || text.includes("drip") || text.includes("spill");
+    const isElectric = text.includes("spark") || text.includes("electric") || text.includes("trip") || text.includes("fuse") || text.includes("short");
 
     let fault = "Mechanical wear detected";
     let rec = "Schedule preventive maintenance inspection.";
@@ -229,6 +230,7 @@ export function DiagnosisFlow() {
     else if (isNoise) { fault = "Abnormal mechanical friction — possible gear/bearing damage"; rec = "Reduce load and inspect drive components."; cost = "₹24,000 – ₹48,000 incl. parts"; }
     else if (isSlow) { fault = "Drive or motor performance degradation"; rec = "Check motor current draw and drive parameters."; cost = "₹35,000 – ₹70,000 incl. parts"; }
     else if (isLeak) { fault = "Hydraulic or lubricant seal failure"; rec = "Isolate circuit, replace seals, check pressure settings."; cost = "₹12,000 – ₹28,000 incl. parts"; }
+    else if (isElectric) { fault = "Electrical fault — possible short circuit or tripped breaker"; rec = "Isolate power, check fuses and motor insulation resistance."; cost = "₹8,000 – ₹22,000 incl. parts"; }
 
     setPipeline(prev => prev.map((p, idx) => {
       if (idx === 0) return { ...p, detail: "Problem description received" };
