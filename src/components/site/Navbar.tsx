@@ -16,11 +16,11 @@ const industries = [
 ];
 
 const links = [
-  { label: "Solutions", href: "#ai-diagnosis" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Resources", href: "#faq" },
-  { label: "Case Studies", href: "#testimonials" },
-  { label: "Support", href: "#faq" },
+  { label: "Solutions", href: "/ai-diagnosis" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Resources", href: "/documentation" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Support", href: "/support" },
 ];
 
 export function Navbar() {
