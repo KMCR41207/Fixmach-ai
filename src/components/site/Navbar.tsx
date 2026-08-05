@@ -69,24 +69,9 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <a
-            href="#technicians"
-            className="rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-          >
-            Sign in
-          </a>
-          <a
-            href="#book"
-            className="rounded-xl border border-border px-3.5 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
-          >
-            Schedule Demo
-          </a>
-          <a
-            href="#book"
-            className="rounded-xl bg-[image:var(--gradient-accent)] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
-          >
-            Book Repair
-          </a>
+          <a href="/sign-in" className="rounded-xl px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary">Sign in</a>
+          <a href="/book-repair" className="rounded-xl border border-border px-3.5 py-2 text-sm font-semibold transition-colors hover:bg-secondary">Schedule Demo</a>
+          <a href="/book-repair" className="rounded-xl bg-[image:var(--gradient-accent)] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5">Book Repair</a>
         </div>
 
         <button
