@@ -45,12 +45,12 @@ const uploadModes = [
 ];
 
 const defaultPipeline = [
-  { icon: UploadCloud, label: "Upload", detail: "Photo received" },
-  { icon: ScanText, label: "OCR", detail: "Image analysed" },
-  { icon: Bot, label: "AI detection", detail: "Running defect detection…" },
-  { icon: Gauge, label: "Confidence", detail: "Calculating confidence…" },
-  { icon: IndianRupee, label: "Cost estimate", detail: "₹34,000 – ₹52,000 incl. parts" },
-  { icon: CheckCircle2, label: "Recommendation", detail: "Awaiting result…" },
+  { icon: UploadCloud, label: "Upload", detail: "File received and queued for processing" },
+  { icon: ScanText, label: "OCR", detail: "Text and data extracted from file" },
+  { icon: Bot, label: "AI detection", detail: "Fault pattern analysis in progress" },
+  { icon: Gauge, label: "Confidence", detail: "Cross-referencing against fault database" },
+  { icon: IndianRupee, label: "Cost estimate", detail: "Parts and labour costing" },
+  { icon: CheckCircle2, label: "Recommendation", detail: "Generating repair action plan" },
   { icon: UserCheck, label: "Technician", detail: "Ravi K. · 6.2 km · ETA 24 min" },
 ];
 
