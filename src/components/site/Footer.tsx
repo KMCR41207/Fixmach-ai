@@ -3,19 +3,43 @@ import { Wrench } from "lucide-react";
 const columns = [
   {
     title: "Platform",
-    items: ["AI Diagnosis", "Book a Repair", "Live Tracking", "Spare Parts", "Pricing", "API"],
+    items: [
+      { label: "AI Diagnosis", href: "/ai-diagnosis" },
+      { label: "Book a Repair", href: "/book-repair" },
+      { label: "Live Tracking", href: "/live-tracking" },
+      { label: "Spare Parts", href: "/spare-parts" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "API", href: "/api" },
+    ],
   },
   {
     title: "Resources",
-    items: ["Blog", "Case Studies", "Documentation", "Support", "Status"],
+    items: [
+      { label: "Blog", href: "/blog" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Documentation", href: "/documentation" },
+      { label: "Support", href: "/support" },
+      { label: "Status", href: "/status" },
+    ],
   },
   {
     title: "Technicians",
-    items: ["Become a Technician", "Certifications", "Payouts", "Leaderboard"],
+    items: [
+      { label: "Become a Technician", href: "/become-technician" },
+      { label: "Certifications", href: "/certifications" },
+      { label: "Payouts", href: "/payouts" },
+      { label: "Leaderboard", href: "/leaderboard" },
+    ],
   },
   {
     title: "Company",
-    items: ["About", "Careers", "Contact", "Privacy", "Terms"],
+    items: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
+    ],
   },
 ];
 
@@ -63,12 +87,12 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">{col.title}</h3>
             <ul className="mt-4 space-y-2.5">
               {col.items.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <a
-                    href="#"
+                    href={item.href}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
