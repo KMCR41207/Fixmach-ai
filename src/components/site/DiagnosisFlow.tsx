@@ -212,6 +212,10 @@ export function DiagnosisFlow() {
       setError("Please describe the problem before running diagnosis.");
       return;
     }
+    if (description.trim().length < 10) {
+      setError("Please provide more detail (at least 10 characters).");
+      return;
+    }
     if (running) return;
 
     // Derive simple NLP hints from description keywords
