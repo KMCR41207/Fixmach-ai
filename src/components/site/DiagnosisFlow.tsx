@@ -340,7 +340,7 @@ export function DiagnosisFlow() {
             <div className="mt-3 flex gap-2">
               <button
                 type="button"
-                disabled={running || !description.trim()}
+                disabled={running || description.trim().length < 10}
                 onClick={handleTextRun}
                 className="rounded-xl bg-[image:var(--gradient-accent)] px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
               >
