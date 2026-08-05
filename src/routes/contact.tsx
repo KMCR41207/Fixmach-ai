@@ -4,7 +4,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({ meta: [{ title: "Contact — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Contact — FixMach AI" }, { name: "description", content: "Get in touch with the FixMach AI team for support, sales or partnership enquiries." }] }),
   component: ContactPage,
 });
 
