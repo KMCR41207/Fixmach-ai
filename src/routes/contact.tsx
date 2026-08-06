@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({ meta: [{ title: "Contact — FixMach AI" }, { name: "description", content: "Get in touch with the FixMach AI team for support, sales or partnership enquiries." }] }),
@@ -13,6 +14,7 @@ function ContactPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Contact" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contact</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Get in touch.</h1>
 
