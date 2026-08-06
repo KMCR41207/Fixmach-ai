@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({ meta: [{ title: "Privacy Policy — FixMach AI" }] }),
@@ -21,6 +22,7 @@ function PrivacyPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Privacy Policy" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Legal</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Privacy Policy</h1>
         <p className="mt-4 text-sm text-muted-foreground">Last updated: August 1, 2026</p>
