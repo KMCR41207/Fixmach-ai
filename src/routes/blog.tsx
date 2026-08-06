@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({ meta: [{ title: "Blog — FixMach AI" }, { name: "description", content: "Practical guides, case studies and product updates for industrial maintenance teams." }] }),
@@ -30,6 +31,7 @@ function BlogPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Blog" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Blog</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Insights for industrial maintenance teams.</h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
