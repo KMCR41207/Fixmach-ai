@@ -4,7 +4,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/leaderboard")({
-  head: () => ({ meta: [{ title: "Leaderboard — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Leaderboard — FixMach AI" }, { name: "description", content: "Top rated industrial technicians on FixMach AI ranked by jobs, rating and response time." }] }),
   component: LeaderboardPage,
 });
 
