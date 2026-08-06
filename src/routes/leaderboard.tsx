@@ -25,6 +25,7 @@ function LeaderboardPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Leaderboard" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Leaderboard</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Top technicians this month.</h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
