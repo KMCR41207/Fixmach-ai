@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { FAQ } from "@/components/site/FAQ";
 
 export const Route = createFileRoute("/support")({
-  head: () => ({ meta: [{ title: "Support — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Support — FixMach AI" }, { name: "description", content: "24/7 support for emergency dispatch. Contact us via live chat, phone or email." }] }),
   component: SupportPage,
 });
 
