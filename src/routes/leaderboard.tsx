@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Trophy, Star, Wrench } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/leaderboard")({
   head: () => ({ meta: [{ title: "Leaderboard — FixMach AI" }, { name: "description", content: "Top rated industrial technicians on FixMach AI ranked by jobs, rating and response time." }] }),
