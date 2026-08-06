@@ -3,6 +3,7 @@ import { Bot, Upload, ScanText, Gauge, IndianRupee, CheckCircle2, UserCheck } fr
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { DiagnosisFlow } from "@/components/site/DiagnosisFlow";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/ai-diagnosis")({
   head: () => ({ meta: [{ title: "AI Diagnosis — FixMach AI" }] }),
@@ -14,6 +15,7 @@ function AIDiagnosisPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="AI Diagnosis" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">AI Diagnosis</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
           From a photo to a costed repair plan in seconds.
