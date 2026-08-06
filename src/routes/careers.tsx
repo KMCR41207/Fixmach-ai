@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({ meta: [{ title: "Careers — FixMach AI" }, { name: "description", content: "Join the FixMach AI team and help build AI for industrial maintenance across India." }] }),
@@ -28,6 +29,7 @@ function CareersPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Careers" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Careers</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Help us fix India's factories.</h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
