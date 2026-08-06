@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Clock, Bell, MessageSquare } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/live-tracking")({
   head: () => ({ meta: [{ title: "Live Tracking — FixMach AI" }] }),
@@ -20,6 +21,7 @@ function LiveTrackingPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
+        <Breadcrumb page="Live Tracking" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Live Tracking</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
           Know exactly where your technician is, every second.
