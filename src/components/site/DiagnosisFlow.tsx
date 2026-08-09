@@ -506,7 +506,11 @@ export function DiagnosisFlow() {
           )}
         </div>
         {step === pipeline.length - 1 && !running && (
-          <div className="mt-3 flex items-center gap-2 rounded-xl border border-green-500/30 bg-green-50 px-3 py-2 text-xs font-semibold text-green-700 dark:bg-green-950/30 dark:text-green-400">
+          <div className={`mt-3 flex items-center gap-2 rounded-xl border px-3 py-2 text-xs font-semibold ${
+            pipeline[2]?.detail?.includes("OK")
+              ? "border-green-500/30 bg-green-50 text-green-700 dark:bg-green-950/30 dark:text-green-400"
+              : "border-orange-500/30 bg-orange-50 text-orange-700 dark:bg-orange-950/30 dark:text-orange-400"
+          }`}>
             <CheckCircle2 className="size-4" />
             Diagnosis complete — technician dispatched
           </div>
