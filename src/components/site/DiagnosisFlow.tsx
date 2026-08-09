@@ -91,48 +91,62 @@ export function DiagnosisFlow() {
 
   const runRealDiagnosis = async (file: File) => {
     if (running) return;
+    // Reset to default pipeline first
     setPipeline(defaultPipeline);
+    setStep(-1);
     setRunning(true);
-    setStep(0);
+    setError(null);
 
-    // Animate steps 0-2 while API call is in progress
-    let i = 0;
-    const id = setInterval(() => {
-      i += 1;
-      if (i >= 2) { clearInterval(id); }
-      else { setStep(i); }
-    }, 800);
+    // Step 0: Upload
+    setStep(0);
 
     try {
       const formData = new FormData();
       formData.append("file", file);
+
+      // Step 1: OCR (show while fetching)
+      await new Promise(r => setTimeout(r, 700));
+      setStep(1);
+
       const res = await fetch("http://localhost:8000/predict", {
         method: "POST",
         body: formData,
       });
-      const data = await res.json();
-      clearInterval(id);
 
-      // Update pipeline with real results
-      setPipeline(prev => prev.map((p, idx) => {
+      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      const data = await res.json();
+
+      // Build result pipeline from real API data
+      const resultPipeline = defaultPipeline.map((p, idx) => {
+        if (idx === 0) return { ...p, detail: `${file.name} uploaded successfully` };
+        if (idx === 1) return { ...p, detail: `Image scanned · ${file.type || "image"} processed` };
         if (idx === 2) return { ...p, detail: `${data.label} detected · ${data.confidence}% confidence` };
-        if (idx === 3) return { ...p, detail: `${data.confidence}% — AI model (99% accuracy)` };
+        if (idx === 3) return { ...p, detail: `${data.confidence}% — ML model trained on 51,000 images` };
+        if (idx === 4) {
+          const cost = data.label === "DEFECTIVE"
+            ? "₹24,000 – ₹52,000 incl. parts"
+            : "No repair needed — routine inspection recommended";
+          return { ...p, detail: cost };
+        }
         if (idx === 5) return { ...p, detail: data.recommendation };
         return p;
-      }));
+      });
 
-      // Animate remaining steps
-      let j = 2;
-      const id2 = setInterval(() => {
+      // Update pipeline with results
+      setPipeline(resultPipeline);
+
+      // Animate remaining steps 2-6 with real data already in state
+      let j = 1;
+      const id = setInterval(() => {
         j += 1;
         setStep(j);
         if (j >= defaultPipeline.length - 1) {
-          clearInterval(id2);
+          clearInterval(id);
           setRunning(false);
         }
-      }, 750);
-    } catch {
-      clearInterval(id);
+      }, 700);
+
+    } catch (err) {
       setError("Could not reach ML backend. Make sure it's running on port 8000.");
       setRunning(false);
       setStep(-1);
