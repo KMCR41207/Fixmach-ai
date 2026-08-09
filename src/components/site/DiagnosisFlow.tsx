@@ -73,16 +73,40 @@ export function DiagnosisFlow() {
 
   const runDiagnosis = () => {
     if (running) return;
-    setPipeline(defaultPipeline);
+
+    // Mode-specific demo results
+    const modePipelines: Record<number, typeof defaultPipeline> = {
+      1: defaultPipeline.map((p, idx) => {
+        if (idx === 0) return { ...p, detail: "Error code screenshot received" };
+        if (idx === 1) return { ...p, detail: "Alarm 176 · SPINDLE OVERHEAT extracted via OCR" };
+        if (idx === 2) return { ...p, detail: "Spindle overheating — coolant flow restriction" };
+        if (idx === 3) return { ...p, detail: "91% — matched against 8,400 similar alarms" };
+        if (idx === 4) return { ...p, detail: "₹18,000 – ₹34,000 incl. parts" };
+        if (idx === 5) return { ...p, detail: "Clean coolant nozzles · check pump pressure" };
+        return p;
+      }),
+      3: defaultPipeline.map((p, idx) => {
+        if (idx === 0) return { ...p, detail: "Maintenance log uploaded" };
+        if (idx === 1) return { ...p, detail: "14 service records parsed · 3 overdue tasks found" };
+        if (idx === 2) return { ...p, detail: "Bearing replacement overdue by 340 hours" };
+        if (idx === 3) return { ...p, detail: "88% — predictive failure pattern detected" };
+        if (idx === 4) return { ...p, detail: "₹12,000 – ₹22,000 incl. parts" };
+        if (idx === 5) return { ...p, detail: "Schedule bearing replacement within 48 hours" };
+        return p;
+      }),
+    };
+
+    const targetPipeline = modePipelines[mode] ?? defaultPipeline;
+    setPipeline(targetPipeline);
     setRunning(true);
     setStep(0);
     let i = 0;
     const id = setInterval(() => {
       i += 1;
-      if (i >= defaultPipeline.length) {
+      if (i >= targetPipeline.length) {
         clearInterval(id);
         setRunning(false);
-        setStep(defaultPipeline.length - 1);
+        setStep(targetPipeline.length - 1);
         return;
       }
       setStep(i);
