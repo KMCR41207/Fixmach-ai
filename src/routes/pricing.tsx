@@ -5,7 +5,7 @@ import { Pricing } from "@/components/site/Pricing";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/pricing")({
-  head: () => ({ meta: [{ title: "Pricing — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Pricing — FixMach AI" }, { name: "description", content: "Simple pricing for industrial maintenance teams. Free plan available. No credit card required." }] }),
   component: PricingPage,
 });
 
