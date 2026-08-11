@@ -51,6 +51,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://primeflexmain.vercel.app" },
+      { property: "og:image", content: "https://primeflexmain.vercel.app/favicon.ico" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "FixMach AI — Industrial Machine Repair in Minutes" },
       { name: "twitter:description", content: "AI diagnostics plus verified industrial technicians on demand for CNC, hydraulic, packaging and robotic machinery." },
