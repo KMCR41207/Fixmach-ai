@@ -5,7 +5,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/documentation")({
-  head: () => ({ meta: [{ title: "Documentation — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Documentation — FixMach AI" }, { name: "description", content: "Guides, API reference and integration docs for plant managers, engineers and developers." }] }),
   component: DocumentationPage,
 });
 
