@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/live-tracking")({
-  head: () => ({ meta: [{ title: "Live Tracking — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Live Tracking — FixMach AI" }, { name: "description", content: "Track your technician live on a map with real ETA, arrival alerts and in-app chat." }] }),
   component: LiveTrackingPage,
 });
 
