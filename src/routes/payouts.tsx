@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/payouts")({
-  head: () => ({ meta: [{ title: "Payouts — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Payouts — FixMach AI" }, { name: "description", content: "Instant escrow-backed payouts for technicians. No chasing invoices — get paid minutes after job sign-off." }] }),
   component: PayoutsPage,
 });
 
