@@ -5,7 +5,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/status")({
-  head: () => ({ meta: [{ title: "Status — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Status — FixMach AI" }, { name: "description", content: "Live system status for all FixMach AI services. Current uptime and incident history." }] }),
   component: StatusPage,
 });
 
