@@ -4,7 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/terms")({
-  head: () => ({ meta: [{ title: "Terms of Service — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Terms of Service — FixMach AI" }, { name: "description", content: "Terms governing use of the FixMach AI platform for plant managers, technicians and enterprise customers." }] }),
   component: TermsPage,
 });
 
