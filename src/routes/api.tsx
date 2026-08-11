@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/api")({
-  head: () => ({ meta: [{ title: "API — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "API — FixMach AI" }, { name: "description", content: "REST API for AI machine diagnosis, technician dispatch and repair tracking. Integrate FixMach AI into your CMMS or ERP." }] }),
   component: APIPage,
 });
 
