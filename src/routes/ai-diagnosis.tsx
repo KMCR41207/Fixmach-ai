@@ -6,7 +6,7 @@ import { DiagnosisFlow } from "@/components/site/DiagnosisFlow";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/ai-diagnosis")({
-  head: () => ({ meta: [{ title: "AI Diagnosis — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "AI Diagnosis — FixMach AI" }, { name: "description", content: "Upload machine photos, error codes or describe the fault. Get an AI diagnosis with cost estimate in seconds." }] }),
   component: AIDiagnosisPage,
 });
 
