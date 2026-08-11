@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/spare-parts")({
-  head: () => ({ meta: [{ title: "Spare Parts — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Spare Parts — FixMach AI" }, { name: "description", content: "OEM and compatible spare parts for industrial machinery. Same-day delivery in major industrial corridors." }] }),
   component: SparePartsPage,
 });
 
