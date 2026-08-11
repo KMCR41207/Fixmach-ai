@@ -5,7 +5,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/case-studies")({
-  head: () => ({ meta: [{ title: "Case Studies — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Case Studies — FixMach AI" }, { name: "description", content: "Real results from Indian manufacturing plants. See how FixMach AI cuts downtime and saves costs." }] }),
   component: CaseStudiesPage,
 });
 
