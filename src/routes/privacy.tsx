@@ -4,7 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({ meta: [{ title: "Privacy Policy — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Privacy Policy — FixMach AI" }, { name: "description", content: "How FixMach AI collects, uses and protects your data. GDPR and IT Act 2000 compliant." }] }),
   component: PrivacyPage,
 });
 
