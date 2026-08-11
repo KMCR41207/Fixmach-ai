@@ -5,7 +5,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/book-repair")({
-  head: () => ({ meta: [{ title: "Book a Repair — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Book a Repair — FixMach AI" }, { name: "description", content: "Book a verified industrial technician in under 2 hours. AI diagnosis, escrow payments, GST invoices." }] }),
   component: BookRepairPage,
 });
 
