@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/certifications")({
-  head: () => ({ meta: [{ title: "Certifications — FixMach AI" }] }),
+  head: () => ({ meta: [{ title: "Certifications — FixMach AI" }, { name: "description", content: "Four-level technician certification framework. Higher levels unlock better jobs and earnings on FixMach AI." }] }),
   component: CertificationsPage,
 });
 
