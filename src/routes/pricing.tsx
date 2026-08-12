@@ -20,6 +20,7 @@ function PricingPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Start free and scale as your plant grows. Every plan includes AI diagnostics, verified technician booking and escrow-protected payments.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">All prices exclude GST. Annual billing available at 20% discount.</p>
         <Pricing />
       </div>
       <Footer />
