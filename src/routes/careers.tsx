@@ -60,6 +60,7 @@ function CareersPage() {
           <a href="mailto:careers@fixmach.ai" className="mt-6 inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary">
             careers@fixmach.ai
           </a>
+          <p className="mt-4 text-xs text-muted-foreground">We respond to every application within 5 business days.</p>
         </div>
       </div>
       <Footer />
