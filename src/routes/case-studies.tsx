@@ -26,6 +26,7 @@ function CaseStudiesPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Real results from Indian manufacturing plants that use FixMach AI for emergency repairs and predictive maintenance.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">₹69+ Lakhs saved across featured case studies · Average downtime reduction: 76%</p>
 
         <div className="mt-12 space-y-8">
           {cases.map((c) => (
