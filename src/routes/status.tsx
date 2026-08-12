@@ -49,7 +49,7 @@ function StatusPage() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-muted-foreground">Uptime measured over the past 90 days. Subscribe to status updates at <a href="mailto:status@fixmach.ai" className="text-primary hover:underline">status@fixmach.ai</a></p>
+        <p className="mt-8 text-xs text-muted-foreground">Uptime measured over the past 90 days. Last checked: {new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}. Subscribe to updates at <a href="mailto:status@fixmach.ai" className="text-primary hover:underline">status@fixmach.ai</a></p>
       </div>
       <Footer />
     </div>
