@@ -27,8 +27,9 @@ function LiveTrackingPage() {
           Know exactly where your technician is, every second.
         </h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-          From dispatch to arrival, track your technician on a live map with real ETA and instant notifications — so your team can prepare the machine and minimise on-site time.
+          Track your technician live on a map with real ETA, arrival alerts and in-app chat — from dispatch to repair complete.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">Location updates every 30 seconds · Works on all devices</p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {features.map((f) => (
