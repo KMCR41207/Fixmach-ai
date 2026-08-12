@@ -37,6 +37,7 @@ function BlogPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Practical guides, case studies and product updates from the FixMach AI team.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">New articles every week. No spam — unsubscribe anytime.</p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
