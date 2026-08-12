@@ -34,6 +34,11 @@ function BecomeTechnicianPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Join 28,500+ verified industrial technicians earning more with flexible jobs matched to their exact machine specialisations.
         </p>
+        <div className="mt-6 flex flex-wrap gap-4 text-sm">
+          <span className="flex items-center gap-1.5 text-muted-foreground"><span className="size-2 rounded-full bg-green-500 inline-block"/>Applications open</span>
+          <span className="flex items-center gap-1.5 text-muted-foreground"><span className="size-2 rounded-full bg-primary inline-block"/>Verification 24–48 hrs</span>
+          <span className="flex items-center gap-1.5 text-muted-foreground"><span className="size-2 rounded-full bg-amber-500 inline-block"/>Instant payouts</span>
+        </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {perks.map((p) => (
