@@ -29,6 +29,7 @@ function SparePartsPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Our in-app marketplace stocks OEM and compatible spares for CNC, hydraulic, packaging and robotic machinery — orderable by your technician mid-job.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">10,000+ SKUs · Same-day delivery in Bengaluru, Pune, Chennai, Mumbai, Hyderabad</p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {features.map((f) => (
