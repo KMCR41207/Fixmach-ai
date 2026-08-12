@@ -63,6 +63,7 @@ export function DiagnosisFlow() {
   const [modeFiles, setModeFiles] = useState<Record<number, File | null>>({});
   const [description, setDescription] = useState("");
   const [charCount, setCharCount] = useState(0);
+  const MAX_DESCRIPTION = 500;
   const [error, setError] = useState<string | null>(null);
   const [pipeline, setPipeline] = useState(defaultPipeline);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -386,9 +387,10 @@ export function DiagnosisFlow() {
               value={description}
               onChange={(e) => { setDescription(e.target.value); setCharCount(e.target.value.length); }}
               disabled={running}
+              maxLength={500}
               className="w-full resize-none rounded-xl border border-border bg-card px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-60"
             />
-            <p className="mt-1 text-right text-[10px] text-muted-foreground">{charCount} chars</p>
+            <p className="mt-1 text-right text-[10px] text-muted-foreground">{charCount}/500</p>
             {error && (
               <p role="alert" className="mt-1 text-xs font-medium text-red-500">{error}</p>
             )}
