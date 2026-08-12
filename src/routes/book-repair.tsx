@@ -29,6 +29,7 @@ function BookRepairPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Emergency or scheduled — book a certified industrial technician for CNC, hydraulic, packaging, robotic and process machinery.
         </p>
+        <p className="mt-2 text-sm font-medium text-primary">Average technician on site: 94 minutes</p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
