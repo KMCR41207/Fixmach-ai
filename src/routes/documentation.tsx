@@ -27,6 +27,7 @@ function DocumentationPage() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           Guides, API reference and integration docs for plant managers, maintenance engineers and developers.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">Last updated: August 2026 · v2.1 API</p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {sections.map((s) => (
