@@ -47,3 +47,4 @@ function SupportPage() {
     </div>
   );
 }
+
