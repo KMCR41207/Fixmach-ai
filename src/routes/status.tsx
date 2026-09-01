@@ -13,10 +13,11 @@ const services = [
   { name: "AI Diagnosis API", status: "Operational", uptime: "99.98%" },
   { name: "Technician Dispatch", status: "Operational", uptime: "99.95%" },
   { name: "Escrow Payments", status: "Operational", uptime: "100%" },
-  { name: "Live Tracking", status: "Operational", uptime: "99.91%" },
-  { name: "Notifications (Push/SMS)", status: "Operational", uptime: "99.87%" },
+  { name: "Live Tracking", status: "Operational", uptime: "99.93%" },
+  { name: "Notifications (Push/SMS)", status: "Operational", uptime: "99.89%" },
   { name: "Web App", status: "Operational", uptime: "99.99%" },
-  { name: "Mobile App (iOS/Android)", status: "Operational", uptime: "99.96%" },
+  { name: "Mobile App (iOS/Android)", status: "Operational", uptime: "99.97%" },
+  { name: "Parts Marketplace API", status: "Operational", uptime: "99.91%" },
 ];
 
 function StatusPage() {
