@@ -59,3 +59,4 @@ function BlogPage() {
     </div>
   );
 }
+
