@@ -20,8 +20,8 @@ function AboutPage() {
 
         <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>FixMach AI was founded in 2024 with one mission: eliminate the days-long wait between an industrial machine breaking down and getting it fixed.</p>
-          <p>We built an AI that reads machine photos, HMI error codes, abnormal sounds and maintenance logs to pinpoint faults in seconds — then instantly connects the plant to a verified, certified technician who can actually fix it.</p>
-          <p>Today, FixMach AI serves manufacturing plants across India, with a network of 28,500+ verified technicians covering CNC, hydraulic, packaging, robotic and process machinery.</p>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">We built an AI that reads machine photos, HMI error codes, abnormal sounds and maintenance logs to pinpoint faults in seconds — then instantly connects the plant to a verified, certified technician who can actually fix it.</p>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">Today, FixMach AI serves manufacturing plants across India, with a network of 28,500+ verified technicians covering CNC, hydraulic, packaging, robotic and process machinery.</p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
