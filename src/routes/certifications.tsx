@@ -52,3 +52,4 @@ function CertificationsPage() {
     </div>
   );
 }
+
