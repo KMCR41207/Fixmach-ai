@@ -10,9 +10,9 @@ export const Route = createFileRoute("/certifications")({
 });
 
 const certs = [
-  { level: "Level 1", title: "General Industrial Technician", req: "ITI certificate + 2 years field experience", machines: "Conveyors, compressors, basic hydraulics" },
-  { level: "Level 2", title: "Specialist Technician", req: "Diploma/BE + 3 years + manufacturer training", machines: "CNC, injection moulding, packaging lines" },
-  { level: "Level 3", title: "Master Technician", req: "BE/ME + 5 years + FixMach assessment", machines: "Robotic arms, PLC systems, cleanroom tools" },
+  { level: "Level 1", title: "General Industrial Technician", req: "ITI certificate + 2 years field experience", machines: "Conveyors, compressors, basic hydraulics, pumps" },
+  { level: "Level 2", title: "Specialist Technician", req: "Diploma/BE + 3 years + manufacturer training", machines: "CNC, injection moulding, packaging lines, welding robots" },
+  { level: "Level 3", title: "Master Technician", req: "BE/ME + 5 years + FixMach assessment", machines: "Robotic arms, PLC systems, cleanroom tools, laser cutting" },
   { level: "Level 4", title: "FixMach Certified Expert", req: "Level 3 + 50 completed jobs + 4.8+ rating", machines: "All categories, mentoring, complex multi-machine faults" },
 ];
 
