@@ -13,7 +13,7 @@ const sections = [
   { icon: Zap, title: "Getting started", items: ["Create your account", "Add your first machine", "Run your first AI diagnosis", "Book your first technician"] },
   { icon: Settings, title: "Platform guide", items: ["Managing machines & service logs", "Team roles and permissions", "Escrow payments explained", "AMC & warranty tracking"] },
   { icon: Code, title: "API reference", items: ["Authentication & API keys", "Diagnose endpoint", "Bookings API", "Webhooks & callbacks"] },
-  { icon: BookOpen, title: "Integrations", items: ["SAP PM integration", "CMMS connectors", "IoT sensor ingestion", "WhatsApp notifications"] },
+  { icon: BookOpen, title: "Integrations", items: ["SAP PM integration", "CMMS connectors", "IoT sensor ingestion", "WhatsApp notifications", "Slack alerts"] },
 ];
 
 function DocumentationPage() {
