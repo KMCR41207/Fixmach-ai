@@ -65,7 +65,7 @@ const stats = [
   { value: 150, suffix: "+", label: "Machine categories" },
   { value: 8, suffix: " min", label: "Average response time" },
   { value: 99.3, suffix: "%", decimals: 1, label: "Repair success" },
-  { value: 12, prefix: "₹", suffix: "Cr+", label: "Downtime saved" },
+  { value: 14, prefix: "₹", suffix: "Cr+", label: "Downtime saved" },
 ];
 
 const urgency = [
