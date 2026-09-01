@@ -14,7 +14,7 @@ function ContactPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
-        <Breadcrumb page="Contact" />
+        <Breadcrumb page="Get in Touch" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contact</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Get in touch.</h1>
 
@@ -55,3 +55,4 @@ function ContactPage() {
     </div>
   );
 }
+
