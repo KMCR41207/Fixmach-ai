@@ -60,3 +60,4 @@ function LeaderboardPage() {
     </div>
   );
 }
+
