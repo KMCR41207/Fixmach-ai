@@ -61,14 +61,12 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { value: 28500, suffix: "+", label: "Verified technicians" },
+  { value: 29000, suffix: "+", label: "Verified technicians" },
   { value: 150, suffix: "+", label: "Machine categories" },
   { value: 8, suffix: " min", label: "Average response time" },
   { value: 99.3, suffix: "%", decimals: 1, label: "Repair success" },
   { value: 14, prefix: "₹", suffix: "Cr+", label: "Downtime saved" },
 ];
-
-const urgency = [
   { icon: Clock, label: "Average response time", value: "8 Minutes" },
   { icon: Wrench, label: "Average repair completion", value: "4.3 Hours" },
   { icon: Siren, label: "Emergency dispatch", value: "24/7" },
