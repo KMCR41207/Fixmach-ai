@@ -14,7 +14,7 @@ function AboutPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-24">
-        <Breadcrumb page="About" />
+        <Breadcrumb page="About Us" />
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">About</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Built to end factory downtime.</h1>
 
@@ -53,3 +53,4 @@ function AboutPage() {
     </div>
   );
 }
+
