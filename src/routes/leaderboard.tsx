@@ -10,14 +10,14 @@ export const Route = createFileRoute("/leaderboard")({
 });
 
 const leaders = [
-  { rank: 1, name: "Ravi K.", city: "Bengaluru", jobs: 312, rating: 4.9, spec: "CNC & Robotic Arms" },
-  { rank: 2, name: "Suresh M.", city: "Pune", jobs: 287, rating: 4.9, spec: "Hydraulic Systems" },
-  { rank: 3, name: "Dinesh P.", city: "Chennai", jobs: 261, rating: 4.8, spec: "Packaging Lines" },
-  { rank: 4, name: "Ankit S.", city: "Ahmedabad", jobs: 244, rating: 4.8, spec: "CNC Milling" },
-  { rank: 5, name: "Pradeep R.", city: "Hyderabad", jobs: 228, rating: 4.7, spec: "PLC & Automation" },
-  { rank: 6, name: "Vijay T.", city: "Mumbai", jobs: 215, rating: 4.7, spec: "Injection Moulding" },
-  { rank: 7, name: "Karthik N.", city: "Coimbatore", jobs: 198, rating: 4.8, spec: "Textile Machinery" },
-  { rank: 8, name: "Ramesh B.", city: "Nagpur", jobs: 187, rating: 4.6, spec: "Compressors & Boilers" },
+  { rank: 1, name: "Ravi K.", city: "Bengaluru", jobs: 318, rating: 4.9, spec: "CNC & Robotic Arms" },
+  { rank: 2, name: "Suresh M.", city: "Pune", jobs: 291, rating: 4.9, spec: "Hydraulic Systems" },
+  { rank: 3, name: "Dinesh P.", city: "Chennai", jobs: 265, rating: 4.8, spec: "Packaging Lines" },
+  { rank: 4, name: "Ankit S.", city: "Ahmedabad", jobs: 248, rating: 4.8, spec: "CNC Milling" },
+  { rank: 5, name: "Pradeep R.", city: "Hyderabad", jobs: 232, rating: 4.7, spec: "PLC & Automation" },
+  { rank: 6, name: "Vijay T.", city: "Mumbai", jobs: 219, rating: 4.7, spec: "Injection Moulding" },
+  { rank: 7, name: "Karthik N.", city: "Coimbatore", jobs: 201, rating: 4.8, spec: "Textile Machinery" },
+  { rank: 8, name: "Ramesh B.", city: "Nagpur", jobs: 190, rating: 4.6, spec: "Compressors & Boilers" },
 ];
 
 function LeaderboardPage() {
