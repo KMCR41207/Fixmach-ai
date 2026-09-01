@@ -13,6 +13,7 @@ const cases = [
   { company: "Bosch India, Pune", industry: "Automotive", machine: "CNC Spindle", saved: "₹18 Lakhs", downtime: "82%", time: "3 hrs", quote: "A spindle failure would normally cost us two days. FixMach had a certified technician on the floor in 41 minutes.", person: "Anand Deshpande, Plant Manager" },
   { company: "JSW Steel, Vijayanagara", industry: "Steel & Metals", machine: "Rolling Mill", saved: "₹42 Lakhs", downtime: "76%", time: "5 hrs", quote: "The AI report was accurate before anyone touched the machine. Our maintenance head approved the quote from his phone.", person: "Priya Nair, Maintenance Head" },
   { company: "Mahindra Logistics, Chennai", industry: "Packaging", machine: "Conveyor Line", saved: "₹9.4 Lakhs", downtime: "71%", time: "2 hrs", quote: "Escrow payments and GST invoices ended our vendor paperwork mess. Six plants, one dashboard.", person: "Rakesh Menon, Operations Director" },
+  { company: "BHEL, Haridwar", industry: "Heavy Engineering", machine: "Hydraulic Press", saved: "₹28 Lakhs", downtime: "68%", time: "6 hrs", quote: "Predictive alerts caught the issue 3 days before the press would have failed. Zero unplanned downtime this quarter.", person: "Sunil Rawat, Chief Engineer" },
 ];
 
 function CaseStudiesPage() {
